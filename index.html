@@ -1,0 +1,446 @@
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Josh TK Graphics</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    background:#efefef;
+    font-family:Georgia, serif;
+}
+
+/* Browser mockup */
+.browser{
+    width:100%;
+    background:#ddd;
+    border-bottom:1px solid #999;
+}
+
+.browser-top{
+    height:40px;
+    background:linear-gradient(#d8c7ea,#b3a0c8);
+    display:flex;
+    align-items:center;
+    padding:0 10px;
+}
+
+.tabs{
+    display:flex;
+    gap:10px;
+}
+
+.tab{
+    background:#f3f3f3;
+    padding:8px 20px;
+    border-radius:5px 5px 0 0;
+    font-size:14px;
+    border:1px solid #999;
+}
+
+.address-bar{
+    background:#f9f9f9;
+    border-top:1px solid #aaa;
+    padding:10px;
+    font-size:14px;
+}
+
+/* Main Website */
+.website{
+    width:1200px;
+    margin:20px auto;
+    background:#240000;
+    border:2px solid #000;
+}
+
+/* Header */
+.header{
+    background:#4b0000;
+    padding:25px;
+    display:flex;
+    align-items:flex-start;
+    gap:25px;
+}
+
+.logo-box{
+    width:240px;
+}
+
+.logo{
+    background:#fff;
+    border:6px solid red;
+    border-radius:25px;
+    padding:20px;
+    text-align:center;
+    box-shadow:0 0 10px #000;
+}
+
+.logo h2{
+    font-size:45px;
+    color:#ff7b00;
+    font-family:Arial;
+}
+
+.logo span{
+    color:#111;
+}
+
+.logo small{
+    display:block;
+    color:#666;
+    font-style:italic;
+}
+
+.tagline{
+    margin-top:10px;
+    background:red;
+    color:#fff;
+    text-align:center;
+    padding:5px;
+    font-size:14px;
+    font-weight:bold;
+    border-radius:0 0 10px 10px;
+}
+
+.site-title{
+    color:#fff;
+    font-family:Arial, sans-serif;
+    font-size:52px;
+    font-weight:bold;
+    margin-top:25px;
+}
+
+/* Contact Bar */
+.contact-bar{
+    background:#1a0000;
+    color:#fff;
+    text-align:center;
+    padding:10px;
+    font-size:20px;
+    border-top:4px solid #300;
+    border-bottom:4px solid #300;
+}
+
+/* Navigation */
+nav{
+    background:#fff;
+    text-align:center;
+    padding:12px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#222;
+    font-size:20px;
+    font-weight:bold;
+    margin:0 20px;
+    font-family:Georgia, serif;
+}
+
+nav a:hover{
+    color:red;
+}
+
+/* Content Area */
+.content{
+    padding:40px 0;
+}
+
+/* Welcome Section */
+.welcome-box{
+    width:900px;
+    margin:0 auto 40px auto;
+    background:#fff;
+    border-radius:35px;
+    padding:25px;
+}
+
+.welcome-inner{
+    background:#ff1b1b;
+    border-radius:30px;
+    border:5px solid orange;
+    padding:25px;
+    color:#fff;
+    display:flex;
+    gap:30px;
+}
+
+.welcome-logo{
+    width:250px;
+    background:#fff;
+    border-radius:25px;
+    padding:20px;
+    text-align:center;
+    height:180px;
+}
+
+.welcome-logo h2{
+    font-size:50px;
+    color:#ff7b00;
+    font-family:Arial;
+}
+
+.welcome-logo span{
+    color:#111;
+}
+
+.welcome-text{
+    flex:1;
+    font-size:20px;
+    line-height:1.5;
+    font-weight:bold;
+    text-align:justify;
+}
+
+/* Portfolio */
+.portfolio-box{
+    width:900px;
+    margin:0 auto;
+    background:#fff;
+    border-radius:35px;
+    padding:25px;
+}
+
+.portfolio-inner{
+    background:#2a0000;
+    border:5px solid orange;
+    border-radius:30px;
+    padding:20px;
+}
+
+.portfolio-table{
+    width:100%;
+    border-collapse:collapse;
+}
+
+.portfolio-table th{
+    background:red;
+    color:#fff;
+    padding:10px;
+    font-size:24px;
+}
+
+.portfolio-table td{
+    border:3px solid #222;
+    background:#ff9900;
+    padding:20px;
+    text-align:center;
+}
+
+.client{
+    background:#fff !important;
+    color:#a00000;
+    font-size:24px;
+    font-weight:bold;
+    width:220px;
+}
+
+.design-box{
+    background:#fff;
+    padding:20px;
+}
+
+.design-box img{
+    width:100%;
+    max-width:350px;
+}
+
+/* Footer */
+footer{
+    margin-top:40px;
+    background:#1d0000;
+    color:#fff;
+    text-align:center;
+    padding:20px;
+    font-size:18px;
+    border-top:2px solid #fff;
+}
+
+footer span{
+    color:red;
+    font-weight:bold;
+}
+
+/* Responsive */
+@media(max-width:1250px){
+
+.website{
+    width:95%;
+}
+
+.welcome-box,
+.portfolio-box{
+    width:95%;
+}
+
+.site-title{
+    font-size:38px;
+}
+
+.welcome-inner{
+    flex-direction:column;
+    align-items:center;
+}
+
+nav a{
+    display:inline-block;
+    margin:10px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<!-- Fake Browser -->
+<div class="browser">
+
+    <div class="browser-top">
+        <div class="tabs">
+            <div class="tab">Opera</div>
+            <div class="tab">Home</div>
+            <div class="tab">Home</div>
+        </div>
+    </div>
+
+    <div class="address-bar">
+        file:///C:/Users/user/Desktop/Josh_tk/home.html
+    </div>
+
+</div>
+
+<!-- Website -->
+<div class="website">
+
+    <!-- Header -->
+    <div class="header">
+
+        <div class="logo-box">
+
+            <div class="">
+                 <img src="./scr/josh_tk_logo.png" alt="">
+            </div>
+
+            <div class="tagline">
+                INNOVATION | CREATIVITY | QUALITY
+            </div>
+
+        </div>
+
+        <div class="site-title">
+            JOSH TK GRAPHICS
+        </div>
+
+    </div>
+
+    <!-- Contact -->
+    <div class="contact-bar">
+        Contact us : Josh TK Graphics --- P.o.box 157, Tema/Ghana --- tel:+233(0)540834343
+    </div>
+
+    <!-- Navigation -->
+    <nav>
+        <a href="#">HOME</a> |
+        <a href="#">ABOUT US</a> |
+        <a href="#">SERVICES</a> |
+        <a href="#">PORTFOLIO</a> |
+        <a href="#">CONTACT US</a>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="content">
+
+        <!-- Welcome -->
+        <div class="welcome-box">
+
+            <div class="welcome-inner">
+
+                <div class="welcome-logo">
+                    <img src="./scr/josh_tk_logo.png" alt="">
+                </div>
+
+                <div class="welcome-text">
+                    Welcome to the official website of Josh TK Graphics,
+                    a firm devoted to providing graphic design solutions
+                    that will meet the needs of individuals, groups and
+                    organisations. At Josh TK Graphics we utilize our
+                    intuitive and creative imaginative skills to suit
+                    specific audiences. You could spend hours trying
+                    to find a graphic designer and promo products provider,
+                    so why not spend that relevant time focused on what
+                    you are good at and leave the creative to us?
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- Portfolio -->
+        <div class="portfolio-box">
+
+            <div class="portfolio-inner">
+
+                <table class="portfolio-table">
+
+                    <tr>
+                        <th>DESIGN</th>
+                        <th>CLIENT</th>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <div class="design-box">
+                                <img src="/scr/sunset_drive_design.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="client">
+                            Sunny Fm
+                        </td>
+
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            <div class="design-box">
+                                <img src="./scr/gospel_beats_design.png" alt="">
+                            </div>
+                        </td>
+
+                        <td class="client">
+                            Gospel Beats Radio Show
+                        </td>
+
+                    </tr>
+
+                </table>
+
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        ©2012 Joshtkgraphics.com. Designed By <span>Solomon</span><br>
+        All rights reserved.
+    </footer>
+
+</div>
+
+</body>
+</html>
+
